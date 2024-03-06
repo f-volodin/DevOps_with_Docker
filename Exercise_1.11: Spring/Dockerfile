@@ -1,8 +1,10 @@
 FROM openjdk:11
 
-# THIS IS A TEMPLATE FOR FURTHER COMPLETION OF THIS EXERCISE
-
-COPY . /usr/src/myapp
+COPY /material-applications/spring-example-project /usr/src/myapp
 WORKDIR /usr/src/myapp
-RUN javac Main.java
-CMD ["java", "Main"]
+
+RUN ./mvnw package
+
+CMD ["java", "-jar", "./target/docker-example-1.1.3.jar"]
+
+EXPOSE 8080
