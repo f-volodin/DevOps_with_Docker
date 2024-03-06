@@ -1,0 +1,13 @@
+filipp.volodin@Volodins-MacBook DevOps_with_Docker % docker run --platform linux/amd64 -d devopsdockeruh/simple-web-service:ubuntu 
+42cfef08a8260d03e687e26849f73cd5ed21150670c28b11524b5d82aabd2672
+filipp.volodin@Volodins-MacBook DevOps_with_Docker % docker ps -a
+CONTAINER ID   IMAGE                                      COMMAND                  CREATED          STATUS                       PORTS     NAMES
+42cfef08a826   devopsdockeruh/simple-web-service:ubuntu   "/usr/src/app/server"    7 seconds ago    Up 7 seconds                           elegant_shirley
+filipp.volodin@Volodins-MacBook DevOps_with_Docker % docker exec -it 42cfef08a826 /bin/bash                                  
+root@42cfef08a826:/usr/src/app# tail -f ./text.log
+2024-03-06 07:49:27 +0000 UTC
+2024-03-06 07:49:29 +0000 UTC
+2024-03-06 07:49:31 +0000 UTC
+2024-03-06 07:49:33 +0000 UTC
+2024-03-06 07:49:35 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'

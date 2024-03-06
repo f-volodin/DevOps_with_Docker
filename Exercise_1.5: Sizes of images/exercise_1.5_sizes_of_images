@@ -1,0 +1,6 @@
+filipp.volodin@Volodins-MacBook DevOps_with_Docker % docker images
+REPOSITORY                          TAG       IMAGE ID       CREATED       SIZE
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   2 years ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   2 years ago   15.7MB
+
+# Seems like ubuntu is 83-15.7=67.3 MB heeavier than alpine

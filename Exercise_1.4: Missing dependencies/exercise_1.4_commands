@@ -1,0 +1,3 @@
+filipp.volodin@Volodins-MacBook DevOps_with_Docker % docker run -it ubuntu 
+root@0e3c32e397f7:/# apt update; apt install curl
+root@0e3c32e397f7:/# sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done'

@@ -1,0 +1,23 @@
+filipp.volodin@Volodins-MacBook DevOps_with_Docker % docker run --platform linux/amd64 -d devopsdockeruh/simple-web-service:alpine
+51c79c884e778a41065f925bfa6912e3ab0843fed4a80218a957449c9d5df0cd
+filipp.volodin@Volodins-MacBook DevOps_with_Docker % docker ps -a                                                                 
+CONTAINER ID   IMAGE                                      COMMAND                 CREATED          STATUS          PORTS     NAMES
+51c79c884e77   devopsdockeruh/simple-web-service:alpine   "/usr/src/app/server"   19 seconds ago   Up 18 seconds             ecstatic_hellman
+filipp.volodin@Volodins-MacBook DevOps_with_Docker % docker exec -it 51c79c884e77 /sh
+OCI runtime exec failed: exec failed: unable to start container process: exec: "/sh": stat /sh: no such file or directory: unknown
+filipp.volodin@Volodins-MacBook DevOps_with_Docker % docker exec -it 51c79c884e77 /bin/sh
+/usr/src/app # tail -f ./text.log
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-03-06 08:16:17 +0000 UTC
+2024-03-06 08:16:19 +0000 UTC
+2024-03-06 08:16:21 +0000 UTC
+2024-03-06 08:16:23 +0000 UTC
+2024-03-06 08:16:25 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2024-03-06 08:16:27 +0000 UTC
+2024-03-06 08:16:29 +0000 UTC
+2024-03-06 08:16:31 +0000 UTC
+2024-03-06 08:16:33 +0000 UTC
+^C
+/usr/src/app # ^C
+/usr/src/app # 
